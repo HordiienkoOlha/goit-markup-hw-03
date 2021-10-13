@@ -23,8 +23,8 @@ body {
   width: 1200px;
 }
 .list {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -50,9 +50,8 @@ body {
   color: var(--accent-color);
 }
 
-.header-nav {
-  background-color: yellow;
-}
+
+
 .webstudio-up {
   color: var(--primary-black-color);
   font-family: Raleway;
@@ -62,6 +61,8 @@ body {
 }
 
 .link-nav {
+  display: flex;
+  
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -102,6 +103,8 @@ body {
 /* ----------------main----------------*/
 
 .hero {
+  text-align: center;
+  Width: 696px;
   text-align: center;
 }
 .hero-title {
