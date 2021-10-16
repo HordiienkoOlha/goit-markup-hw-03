@@ -11,20 +11,38 @@
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --button-bg-color: #f5f4fa;
 }
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+button {
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
 
 body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
-  background-color: var(--primary-bg-color);
+  background-color: var(--primary-white-color);
   color: var(--primary-text-color);
 }
 
 .container {
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 .list {
   padding: 0;
@@ -54,12 +72,11 @@ body {
   color: var(--accent-color);
 }
 
-.webstudio-up {
-  display: block;
+.header-nav {
   padding-top: 24px;
   padding-bottom: 25px;
-  margin-right: 0;
-
+}
+.webstudio-up {
   color: var(--primary-black-color);
   font-family: Raleway;
   font-weight: 700;
@@ -68,25 +85,34 @@ body {
 }
 
 .site-nav {
-  display: flex;
-  height: 80px;
+  align-items: center;
 }
 
 .link-nav {
-  display: flex;
-  margin-left: 93px;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
+.link-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav {
+  display: flex;
+}
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.container-header {
+  display: flex;
+}
 .link-nav .item {
   margin-right: 50px;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .link-nav .item:last-child {
@@ -101,26 +127,22 @@ body {
 }
 
 .header-contacts {
-  display: flex;
-  margin-left: 331px;
-
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
 
-.header-contacts .item {
-  margin-right: 50px;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .header-contacts .item:last-child {
   margin-right: 0;
 }
+.header-mail {
+  margin-left: 331px;
+}
 
+.header-phone {
+  margin-left: 50px;
+}
 .header-mail,
 .header-phone {
   color: var(--primary-text-color);
@@ -141,9 +163,10 @@ body {
 /* ----------------main----------------*/
 
 .hero {
+  width: 1600px;
+  height: 600px;
   text-align: center;
-  width: 696px;
-  text-align: center;
+  background-color: var(--hero-bg-color);
 }
 .hero-title {
   width: 696px;
@@ -158,20 +181,26 @@ body {
 
   letter-spacing: 0.06em;
 }
-.button {
-  border: 1px solid transparent;
+
+.features-list {
+  display: flex;
+  width: 270px;
+  height: 101px;
+  margin-top: 94px;
+  center: flex-direction;
 }
 
 .button-primary {
-  padding-top: 30px;
-  padding: 10px 32px;
+  min-width: 136px;
+  min-height: 30px;
+
   border: 1px solid #000000;
-  box-sizing: border-box;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   color: var(--primary-white-color);
   background-color: var(--accent-color);
-  cursor: pointer;
+
   font-family: Roboto, sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -180,6 +209,10 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
 }
+.filter-list .button-secondary:last-child {
+  margin-right: 0;
+}
+
 .button-primary:hover {
   background-color: #188ce8;
 }
@@ -193,6 +226,13 @@ body {
 .features-description {
   font-size: 14px;
   line-height: 1.71;
+}
+
+.features-item {
+}
+
+.galery {
+  margin-top: 94px;
 }
 
 .team {
@@ -265,17 +305,20 @@ footer {
   line-height: 1.88;
 }
 .button-secondary {
-  margin-right: 8px;
-  padding: 6px 22px;
-  background: var(--button-bg-color);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border: 0px;
+  margin-left: 8px;
   border-radius: 4px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
   color: var(--secondary-text-color);
   background-color: var(--button-bg-color);
-  cursor: pointer;
   font-family: Roboto, sans-serif;
 }
 .button-secondary:hover {
