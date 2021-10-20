@@ -28,6 +28,7 @@ button {
   cursor: pointer;
 }
 img {
+  height: auto;
   display: block;
   max-width: 100%;
 
@@ -88,70 +89,59 @@ body {
 }
 
 .site-nav {
+  display: flex;
   align-items: center;
+
 }
 
-.link-nav {
+.navigation {
+  display: flex;
+  margin-left: 93px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--title-text-color);
 }
 
-.link-nav {
-  display: flex;
-  margin-left: 93px;
-}
 
-.site-nav {
-  display: flex;
-}
 .header-contacts {
   display: flex;
-  margin-left: auto;
+  margin-left: 331px;
   align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 .container-header {
   display: flex;
 }
-.link-nav .item {
+.navigation .navigation-item {
   margin-right: 50px;
 }
 
-.link-nav .item:last-child {
+.navigation .navigation-item:last-child {
+  margin-right: 0;
+}
+.header-contacts .navigation-item {
+  margin-right: 50px;
+}
+
+.header-contacts .navigation-item:last-child {
   margin-right: 0;
 }
 
-.link-nav-dark {
-  color: var(--title-text-color);
-}
-.link-nav-accent {
-  color: var(--accent-color);
-}
 
-.header-contacts {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-
-
-.item {
-  margin-left: 50px;
-}
-.item:first-child {
-  margin-left: 0;
-}
 
 .header-mail,
 .header-phone {
   color: var(--primary-text-color);
 }
 
-.link-nav-dark:hover,
-.link-nav-dark:focus {
+.navigation-link:hover,
+.navigation-link:focus {
   color: var(--accent-color);
 }
 
@@ -161,6 +151,7 @@ body {
 .header-phone:hover {
   color: var(--accent-color);
 }
+
 
 /* ----------------main----------------*/
 
@@ -184,7 +175,7 @@ body {
 .features-list {
   display: flex;
   justify-content: space-between;
-  width: 1170px;
+
 
 }
 .filter-list .features-item:last-child {
@@ -223,6 +214,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   color: var(--secondary-text-color);
+  text-transform: uppercase;
 }
 .features-item .features-description {
   margin-top: 10px;
@@ -289,13 +281,20 @@ body {
 }
 
 .team-person {
-  margin: 30px 0;
+  padding: 30px 0;
 }
 .name {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
   color: var(--secondary-text-color);
 }
-
+.name-description {
+  font-size: 16px;
+  line-height: 1.19;
+}
 /* ----------------footer----------------*/
 
 .footer-container {
@@ -313,15 +312,15 @@ body {
 }
 
 .contacts-item {
-  padding-right: 9px;
+  padding-bottom: 9px;
 }
 
 .contacts-list .contacts-item:last-child {
-  padding-right: 0;
+  padding-bottom: 0;
 }
 
 .contacts {
-  padding-top: 20px;
+  margin-top: 20px;
 }
 .contacts-list {
   font-family: inherit;
@@ -345,6 +344,7 @@ body {
 
 /* ----------------second page----------------*/
 
+/* ----------------Portfolio----------------*/
 
 .button-secondary {
   padding: 6px 22px 6px 22px;
@@ -364,59 +364,49 @@ body {
   background-color: var(--accent-color);
 }
 
-.btn {
+.item {
   padding-right: 8px;
 }
 
-.filter-list .btn:last-child
+.filter-list .item:last-child
 {
   padding-right: 0;
 }
 
+.filter-list {
+  display: flex;
+  justify-content: center;
+}
+
+/* ----------------Project list----------------*/
 .title-page-two {
-  margin-top: 20px;
+  margin-bottom: 4px;
+
   color: var(--title-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.title-page-two,
-.description-page-two {
-  margin-left: 24px;
+.projects-title {
+  padding: 20px 24px;
 }
-.filter-list {
-  display: flex;
-  justify-content: center;
-}
+
 
 .description-page-two {
   font-size: 16px;
   line-height: 1.88;
-  padding-top: 4px;
 }
 
 .projects {
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
-
+  margin-left: -30px;
+  margin-bottom: -30px;
 }
-
 .projects-item {
-  width: 370px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-}
-
-.projects-title {
-  padding: 20px 24px 20px 24px;
-}
-
-
-.projects-item:nth-child(3n) {
-  padding-right: 0;
-}
-.projects-item:nth-last-child(-n+3) {
-  padding-bottom: 0;
+  flex-basis: calc((100% - 3 * 30px) / 3);
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
