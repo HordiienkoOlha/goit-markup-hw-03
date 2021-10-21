@@ -99,7 +99,6 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: var(--title-text-color);
 }
 
 .header-contacts {
@@ -134,6 +133,12 @@ body {
   color: var(--primary-text-color);
 }
 
+.navigation-link {
+  color: var(--title-text-color);
+}
+.navigation .accent {
+  color: var(--accent-color);
+}
 .navigation-link:hover,
 .navigation-link:focus {
   color: var(--accent-color);
